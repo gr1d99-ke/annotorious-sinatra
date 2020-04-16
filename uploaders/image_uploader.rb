@@ -1,4 +1,5 @@
 class ImageUploader < Shrine
+  plugin :determine_mime_type
   plugin :validation_helpers
 
   Attacher.validate do

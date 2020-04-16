@@ -1,4 +1,6 @@
 .idea/
 config/database.yml
 public/uploads/*
-
+*.png
+*.json
+*.DS_Store
