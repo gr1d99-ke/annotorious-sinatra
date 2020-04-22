@@ -1,7 +1,13 @@
 require './config/environment.rb'
 require './application'
-map '/presign' do
-  run Shrine.presign_endpoint(:cache)
+
+use Rack::Cors do
+  allow do
+    origins '*'
+    resource '*',
+             headers: :any,
+             methods: [:get, :post, :put, :options, :patch]
+  end
 end
 
 run Application::Api

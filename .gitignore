@@ -4,3 +4,6 @@ public/uploads/*
 *.png
 *.json
 *.DS_Store
+log/
+
+.env.sh

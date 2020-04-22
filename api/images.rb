@@ -2,9 +2,8 @@
 
 module Application
   class Api < Sinatra::Base
-    post '/attach' do
-      image_data = JSON.parse(request.body.read)
-      @photo = Photo.new(image: image_data)
+    attach_image = lambda do
+      @photo = Photo.new(image: params[:file])
       if @photo.valid?
         @photo.save!
         json @photo
@@ -12,5 +11,7 @@ module Application
         json errors: @photo.errors
       end
     end
+
+    post '/attach', {}, &attach_image
   end
 end
