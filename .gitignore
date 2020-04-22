@@ -1,2 +1,9 @@
-config/database.yml
 .idea/
+config/database.yml
+public/uploads/*
+*.png
+*.json
+*.DS_Store
+log/
+
+.env.sh
