@@ -5,7 +5,7 @@ gem 'sinatra'
 gem 'activerecord'
 gem 'pg'
 gem 'rake'
-gem 'shrine', '~> 3.0'
+gem 'shrine', '~> 3.3'
 gem 'sinatra-activerecord'
 gem 'sinatra-contrib'
 
